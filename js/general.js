@@ -13,6 +13,7 @@ function createNote(){
 			return Newnote;
 		}
 }
+
 function getCounter(){
 	var counter = document.getElementById("count");
 	counter.innerHTML = "You have" + " " + (noteArray.length) + " " + "Notes";
@@ -40,6 +41,24 @@ function validation(){
 			inputTitle.style.backgroundColor = "red";
 			inputContent.style.border = "5px solid red";
 			inputContent.style.backgroundColor = "red";
+			var arr = inputDate.value.split('/');
+			var isDateAString = true;
+			for(var i = 0; i < arr.length; i++){
+				if(isNaN(arr[i])){
+					isDateAString = false;
+					break;
+				}
+			}
+			if((isDateAString == false) || (inputDate.value.indexOf("/") === -1)){
+				inputDate.style.border = "5px solid red";
+				inputDate.style.backgroundColor = "red";
+				return false;
+			}
+			if((arr[0] < 0) || (arr[1] < 0) || (arr[2] < 0) || (arr[0].length == 2) || 
+				(arr[1].length == 2) || (arr[2].length == 4)){
+				inputDate.style.border = "5px solid red";
+				inputDate.style.backgroundColor = "red";
+			}
 			return false;
 		}
 		if((inputDate.value == "") && (inputContent.value == "")){
@@ -77,8 +96,10 @@ function addNote (){
 		var p = document.createElement("p");
 		var p1 = document.createElement("p");
 		var deleteButton = document.createElement("button");
-		deleteButton.onClick = function(event){
-			li.remove();
+		deleteButton.onclick = function(event){
+			event.target.parentElement.remove();
+			noteArray.splice(0,1);
+			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
 		p1.innerHTML = Newnote.getInputDate();
@@ -96,3 +117,4 @@ function addNote (){
 		newNoteInput.appendChild(li);
 	}
 }
+
