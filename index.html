@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" media="screen" href="css/style.CSS" />
+		<script src = "js/note.js"></script>
+	</head>
+	<body>
+		<h2>
+			theTaskBoard
+			<div id = "counter">
+				<h5 id = "count">You have 0 Notes</h5>
+			</div>
+		</h2>
+		<div class = "paperInput">
+			<input id = "paperInputTitle" type = "text" placeholder="Enter your Title:" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Title:'" />
+			<input id = "paperInputDate" type="text" placeholder="dd/mm/yyyy" onfocus="this.placeholder = ''" onblur="this.placeholder = 'dd/mm/yyyy'" class = "paperInput" />
+			<input id = "paperInputContent" type="text" placeholder="Enter Your Note:" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Note:'" class = "paperInput" />
+			<button class = "submitButton" onclick = "addNote()">Add</button>
+		</div>
+		<div class = "noteInput">
+			<ul id = "noteInput">
+			</ul>
+		</div>
+		<script src = "js/general.js"></script>
+	</body>
+</html>
