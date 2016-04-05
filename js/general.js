@@ -88,18 +88,6 @@ function validation(){
 		}
 }
 
-function deleteFromArray(tagName){
-	var trueOrFalse;
-	for(var i = 0; i < noteArray.length; i++){
-		if(tagName == noteArray[i].getInputTitle()){
-			trueOrFalse = noteArray[i];
-		}
-		else{
-			
-		}
-	}
-	return trueOrFalse;
-}
 
 function addNote (){
 	if(Newnote = createNote()){
@@ -111,9 +99,7 @@ function addNote (){
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
-			var tagName = event.target.parentElement.getElementsByTagName("h3");
-			var LocationInArray = deleteFromArray(tagName)
-			noteArray.splice(LocationInArray,1);
+			noteArray.splice(1,1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
