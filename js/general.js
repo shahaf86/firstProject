@@ -98,7 +98,8 @@ function addNote (){
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
-			noteArray.splice(event.target.parentElement.value,1);
+			var itemToRemove = this;
+			noteArray.splice(itemToRemove,1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
