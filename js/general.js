@@ -89,6 +89,7 @@ function validation(){
 }
 
 function deleteFromArray(tagName){
+	var trueOrFalse;
 	for(var i = 0; i < noteArray.length; i++){
 		if(tagName == noteArray[i].getInputTitle()){
 			trueOrFalse = noteArray[i];
