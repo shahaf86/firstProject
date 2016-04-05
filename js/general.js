@@ -88,6 +88,16 @@ function validation(){
 		}
 }
 
+function deleteFromArray(tagName){
+	for(var i = 0; i < noteArray.length; i++){
+		if(tagName == noteArray[i].getInputTitle()){
+			return true + noteArray[i];
+		}
+		else
+			return false;
+	}
+}
+
 function addNote (){
 	if(Newnote = createNote()){
 		getCounter();
@@ -98,8 +108,8 @@ function addNote (){
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
-			var itemToRemove = this;
-			noteArray.splice(itemToRemove,1);
+			var tagName = event.target.parentElement.getElementsByTagName("h3");
+			noteArray.splice(deleteFromArray(tagName),1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
