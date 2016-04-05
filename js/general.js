@@ -99,7 +99,7 @@ function addNote (){
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
 			console.log(event.target.parentElement.value);
-			noteArray.splice(,1);
+			noteArray.splice(1,1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
