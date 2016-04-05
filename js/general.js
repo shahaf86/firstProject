@@ -91,11 +91,13 @@ function validation(){
 function deleteFromArray(tagName){
 	for(var i = 0; i < noteArray.length; i++){
 		if(tagName == noteArray[i].getInputTitle()){
-			return true + noteArray[i];
+			trueOrFalse = noteArray[i];
 		}
-		else
-			return false;
+		else{
+			
+		}
 	}
+	return trueOrFalse;
 }
 
 function addNote (){
@@ -109,7 +111,8 @@ function addNote (){
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
 			var tagName = event.target.parentElement.getElementsByTagName("h3");
-			noteArray.splice(deleteFromArray(tagName),1);
+			var LocationInArray = deleteFromArray(tagName)
+			noteArray.splice(LocationInArray,1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
