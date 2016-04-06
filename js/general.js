@@ -15,10 +15,6 @@ function createNote(){
 				arrayPosition++;
 				return Newnote;
 			}
-			else {
-				arrayPosition++;
-				return Newnote;
-			}
 		}
 }
 
