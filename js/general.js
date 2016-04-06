@@ -11,10 +11,8 @@ function createNote(){
 		if(ifAllIsGood == true){
 			var Newnote = new note(inputTitle.value, inputContent.value, inputDate.value, arrayPosition);
 			noteArray.push(Newnote);
-			if(arrayPosition == 0){
 				arrayPosition++;
 				return Newnote;
-			}
 		}
 }
 
@@ -103,7 +101,7 @@ function addNote (){
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
-			noteArray.splice(0,1);
+			noteArray.splice(arrayPosition,1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
