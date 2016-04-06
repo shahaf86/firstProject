@@ -1,6 +1,7 @@
 var newNoteInput = document.getElementById("noteInput");
 var noteArray = [];
 var inputContent;
+var arrayPosition = 0;
 
 function createNote(){
 	inputTitle = document.getElementById("paperInputTitle");
@@ -8,8 +9,9 @@ function createNote(){
 	inputContent = document.getElementById("paperInputContent");
 	var ifAllIsGood = validation();
 		if(ifAllIsGood == true){
-			var Newnote = new note(inputTitle.value, inputContent.value, inputDate.value);
+			var Newnote = new note(inputTitle.value, inputContent.value, inputDate.value, arrayPosition);
 			noteArray.push(Newnote);
+			arrayPosition++;
 			return Newnote;
 		}
 }
