@@ -1,7 +1,6 @@
 var newNoteInput = document.getElementById("noteInput");
 var noteArray = [];
 var inputContent;
-var arrayPosition = 0;
 
 function createNote(){
 	inputTitle = document.getElementById("paperInputTitle");
@@ -11,7 +10,6 @@ function createNote(){
 		if(ifAllIsGood == true){
 			var Newnote = new note(inputTitle.value, inputContent.value, inputDate.value, arrayPosition);
 			noteArray.push(Newnote);
-				arrayPosition++;
 				return Newnote;
 		}
 }
@@ -101,7 +99,7 @@ function addNote (){
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
-			noteArray.splice(arrayPosition,1);
+			noteArray.splice(0,1);
 			getCounter();
 		}
 		h3.innerHTML = Newnote.getInputTitle();
