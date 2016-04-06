@@ -12,6 +12,7 @@ function createNote(){
 			var Newnote = new note(inputTitle.value, inputContent.value, inputDate.value, arrayPosition);
 			noteArray.push(Newnote);
 			if(arrayPosition == 0){
+				arrayPosition++;
 				return Newnote;
 			}
 			else {
