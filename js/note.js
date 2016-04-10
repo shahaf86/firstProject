@@ -4,6 +4,7 @@ var inputDate;
 var getInputTitle;
 var getInputContent;
 var getInputDate;
+var getInputId;
 var arrayPosition;
 var id;
 
@@ -22,7 +23,7 @@ function note(title, content, date, arrayPosition,id){
 	this.getInputDate = function getInputDate(){
 		return date;
 	}
-	this.getNoteId = function getNoteId(){
+	this.getInputId = function getNoteId(){
 		return id;
 	}
 }
