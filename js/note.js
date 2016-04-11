@@ -8,10 +8,10 @@ var getInputDate;
 var getInputId;
 
 function note(title, content, date, id){
-	this.inputTitle = inputTitle;
-	this.inputContent = inputContent;
-	this.inputDate = inputDate;
-	this.noteArrayId = noteArrayId;
+	this.inputTitle = title;
+	this.inputContent = content;
+	this.inputDate = date;
+	this.noteArrayId = id;
 	this.getInputTitle = function getInputTitle(){
 		return title;
 	}
