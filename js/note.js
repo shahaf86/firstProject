@@ -6,7 +6,6 @@ var getInputContent;
 var getInputDate;
 var getInputId;
 var arrayPosition;
-var id;
 
 function note(title, content, date, arrayPosition,id){
 	this.inputTitle = inputTitle;
