@@ -1,18 +1,17 @@
 var inputTitle;
 var inputContent;
 var inputDate;
+var noteArrayId;
 var getInputTitle;
 var getInputContent;
 var getInputDate;
 var getInputId;
-var arrayPosition;
 
-function note(title, content, date, arrayPosition,id){
+function note(title, content, date, id){
 	this.inputTitle = inputTitle;
 	this.inputContent = inputContent;
 	this.inputDate = inputDate;
-	this.id = id;
-	this.arrayPosition = arrayPosition;
+	this.noteArrayId = noteArrayId;
 	this.getInputTitle = function getInputTitle(){
 		return title;
 	}
