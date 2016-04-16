@@ -1,6 +1,7 @@
 var newNoteInput = document.getElementById("noteInput");
 var noteArray = [];
 var inputContent;
+var id = -1;
 
 function createNote(){
 	inputTitle = document.getElementById("paperInputTitle");
@@ -90,12 +91,14 @@ function validation(){
 
 
 function addNote (){
+	id++;
 	if(Newnote = createNote()){
 		getCounter();
 		var li = document.createElement("li");
 		var h3 = document.createElement("h3");
 		var p = document.createElement("p");
 		var p1 = document.createElement("p");
+		var Noteid = document.createElement("p");
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
@@ -109,6 +112,7 @@ function addNote (){
 		li.appendChild(h3);
 		li.appendChild(p1);
 		li.appendChild(p);
+		li.appendChild(Noteid);
 		li.appendChild(deleteButton);
 		deleteButton.className = "delete";
 		deleteButton.style.display = "none";
