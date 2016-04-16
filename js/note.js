@@ -10,7 +10,6 @@ function note(title, content, date){
 	this.inputTitle = title;
 	this.inputContent = content;
 	this.inputDate = date;
-	this.noteArrayId = id;
 	this.getInputTitle = function getInputTitle(){
 		return title;
 	}
