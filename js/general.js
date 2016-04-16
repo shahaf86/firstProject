@@ -98,7 +98,6 @@ function addNote (){
 		var h3 = document.createElement("h3");
 		var p = document.createElement("p");
 		var p1 = document.createElement("p");
-		var Noteid = document.createElement("p");
 		var deleteButton = document.createElement("button");
 		deleteButton.onclick = function(event){
 			event.target.parentElement.remove();
@@ -108,14 +107,13 @@ function addNote (){
 		h3.innerHTML = Newnote.getInputTitle();
 		p1.innerHTML = Newnote.getInputDate();
 		p.innerHTML = Newnote.getInputContent();
-		Noteid.innerHTML = id;
 		deleteButton.innerHTML = "X";
 		li.appendChild(h3);
 		li.appendChild(p1);
 		li.appendChild(p);
 		li.appendChild(Noteid);
 		li.appendChild(deleteButton);
-		Noteid.setAttribute("id", id);
+		li.setAttribute("id", id);
 		deleteButton.className = "delete";
 		deleteButton.style.display = "none";
 		deleteButton.style.position = "absolute";
