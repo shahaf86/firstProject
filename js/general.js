@@ -115,7 +115,7 @@ function addNote (){
 		li.appendChild(p);
 		li.appendChild(Noteid);
 		li.appendChild(deleteButton);
-		Noteid.setAttribute("id", "id");
+		Noteid.setAttribute("id", id);
 		deleteButton.className = "delete";
 		deleteButton.style.display = "none";
 		deleteButton.style.position = "absolute";
