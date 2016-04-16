@@ -108,6 +108,7 @@ function addNote (){
 		h3.innerHTML = Newnote.getInputTitle();
 		p1.innerHTML = Newnote.getInputDate();
 		p.innerHTML = Newnote.getInputContent();
+		Noteid.innerHTML = id;
 		deleteButton.innerHTML = "X";
 		li.appendChild(h3);
 		li.appendChild(p1);
